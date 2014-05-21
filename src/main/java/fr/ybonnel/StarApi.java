@@ -20,13 +20,14 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class StarApi {
 
 
     private static class DateDeserialiser implements JsonDeserializer<Date> {
         DateFormat dfm = new SimpleDateFormat(
-                "yyyy-MM-dd'T'HH:mm:ss");
+                "yyyy-MM-dd'T'HH:mm:ss", Locale.FRANCE);
 
         @Override
         public Date deserialize(JsonElement arg0, Type arg1,
